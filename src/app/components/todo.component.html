@@ -1,0 +1,38 @@
+<h2>ToDo</h2>
+
+<form [formGroup]="form" (ngSubmit)="addTask()">
+    <table>
+        <tr>
+            <td>Description:</td>
+            <td>
+                <input type="text" size="30" formControlName="description">
+            </td>
+        </tr>
+        <tr>
+            <td>Priority:</td>
+            <td>
+               
+                <!-- value="" is what data you're intending to send -->
+                <input type="radio" name="priority" id="high" value="high" formControlName="priority">
+                <label for="high">High</label>
+                <input type="radio" name="priority" id="medium" value="medium" formControlName="priority">
+                <label for="medium">Medium</label>
+                <input type="radio" name="priority" id="low" value="low" formControlName="priority" checked="checked">
+                <label for="low">Low</label>
+           
+            </td>
+            
+        </tr>
+        <tr>
+            <td>Due:</td>
+            <td>
+                <input type="date" size="30" formControlName="due">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" [disabled]="form.invalid">Add</button></td>
+        </tr>
+        
+    </table>
+</form>

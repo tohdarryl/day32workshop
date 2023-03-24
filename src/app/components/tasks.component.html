@@ -1,0 +1,17 @@
+<h2>Tasks</h2>
+
+<table>
+    <tr *ngFor="let t of tasks; let idx = index">
+                
+        <td>{{t.description}}</td>
+        
+        <td>{{t.priority}}</td>
+        
+        <td>{{t.due | date}}</td>
+    
+    <button type="button">Modify</button>
+    <button type="button" (click)="removeTaskFromList(idx)">X</button>
+    
+</tr>
+
+</table>

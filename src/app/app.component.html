@@ -1,0 +1,3 @@
+
+<app-todo [task]="selectedTask" (onNewTask)="addToTasks($event)"></app-todo>
+<app-tasks [tasks]="taskList" (onModifyItem)="taskModify($event)"></app-tasks>
